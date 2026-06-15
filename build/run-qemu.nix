@@ -1,13 +1,15 @@
 {
-  writeScriptBin,
+  writeShellScriptBin,
+  qemu
 }:
 {
   kernel,
   initramfs,
   memory ? "1G",
 }:
-writeScriptBin "runvm" ''
-  sudo qemu-system-x86_64 \
+writeShellScriptBin "runvm" ''
+  sudo ${qemu}/bin/qemu-system-x86_64 \
+    -nic user,ipv6=off,model=rtl8139 \
     -enable-kvm \
     -m ${memory} \
     -kernel ${kernel}/bzImage \
@@ -15,3 +17,4 @@ writeScriptBin "runvm" ''
     -nographic -append "console=ttyS0" \
     -s
 ''
+
