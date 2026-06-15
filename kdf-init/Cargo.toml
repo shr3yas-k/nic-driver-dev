@@ -1,0 +1,12 @@
+[package]
+name = "kdf-init"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rustix = { version = "0.38", features = ["process", "fs", "mount", "system", "stdio", "termios"] }
+anyhow = "1.0"
+
+[[bin]]
+name = "init"
+path = "src/main.rs"
