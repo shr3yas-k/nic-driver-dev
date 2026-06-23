@@ -106,6 +106,13 @@ in
         DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT = yes;
         GDB_SCRIPTS = yes;
         # FW_LOADER = yes;
+
+        PCI= yes;
+        # PCI_SYSFS = yes;
+        PCI_DOMAINS=yes;
+        PCI_MSI=yes;
+        # PCI_MSI_IRQ_DOMAIN=yes;
+
       }
       // lib.optionalAttrs enableBPF {
         BPF_SYSCALL = yes;
@@ -126,7 +133,6 @@ in
         ACPI_BUTTON = yes;
 
         # PCI bus support (required for VIRTIO_PCI)
-        PCI = yes;
 
         # Virtio support for kdf-init/kdf-cli
         VIRTIO_MENU = yes;
