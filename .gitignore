@@ -13,6 +13,8 @@
 compile_commands.json
 rust-project.json
 
+.cache/
+
 .ccls-cache
 /.tmp
 result

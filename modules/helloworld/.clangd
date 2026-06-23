@@ -1,0 +1,10 @@
+CompileFlags:
+  Remove: [
+    -mpreferred-stack-boundary=*,
+    -fno-allow-store-data-races,
+    -fmin-function-alignment=*,
+    -fconserve-stack,
+    -fasan-shadow-offset=*,
+    -fsanitize=bounds-strict,
+]
+
